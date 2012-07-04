@@ -1,0 +1,15 @@
+<section>
+	<ul>
+<%
+
+	@d.each { | filename | 
+		if filename == "." || filename == ".." then next end 
+		%>
+			<li><%= "uploads/photos/" + filename %></li>
+		<%
+	}
+
+%>		
+	</ul>
+	
+</section>

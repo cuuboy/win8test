@@ -1,8 +1,19 @@
 
 class PhotosController < ApplicationController
 	
+	def index
+	
+		@file_path = "public/uploads/photos/"
+		
+		@d = Dir.new( Rails.root + @file_path )
+		
+	
+	end
+	
 	def show
 	end
+	
+	
 
 	def test
 		puts 'Print test' end
