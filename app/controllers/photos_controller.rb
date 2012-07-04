@@ -20,14 +20,14 @@ class PhotosController < ApplicationController
 	def upload
 	 	@upload_file = params[:File0]
 	 	
-	 	params[ :upload ] = @upload_file
-	 	exit
+	 	#params[ :upload ] = @upload_file
+	 	#exit
 	 	#get original filename
 	 	@filename = @upload_file.original_filename
 	 			 	
 	 	@file_path = "public/uploads/photos/"
 	 	file_name = @upload_file.filename
-	 	File.open( @file_path + file_name , 'wb') do | file |
+	 	File.open( @file_path + @file_name , 'wb') do | file |
 	 		file.write( @upload_file.read )
 	 	end
 	end
