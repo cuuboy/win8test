@@ -27,7 +27,7 @@ class PhotosController < ApplicationController
 	 			 	
 	 	@file_path = "public/uploads/photos/"
 	 	
-	 	File.open( @file_path + @file_name , 'wb') do | file |
+	 	File.open( @file_path + @filename , 'wb') do | file |
 	 		file.write( @upload_file.read )
 	 	end
 	end
