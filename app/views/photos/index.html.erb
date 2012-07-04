@@ -5,7 +5,7 @@
 	@d.each { | filename | 
 		if filename == "." || filename == ".." then next end 
 		%>
-			<li><%= "uploads/photos/" + filename %></li>
+			<li><img src="<%= "uploads/photos/" + filename %>" /></li>
 		<%
 	}
 
