@@ -30,6 +30,9 @@ class PhotosController < ApplicationController
 		 			 	
 		 	@upload_file = params[:File0]
 		 	
+		 	params[ :upload ] = @upload_file
+		 	exit
+		 	
 		 	#get original filename
 		 	@filename = @upload_file.original_filename
 		 			 	
